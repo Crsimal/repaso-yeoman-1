@@ -60,3 +60,11 @@ Ejecutar yeoman
 ---------------
 - Dentro de la carpeta de nuestro proyecto
 yo webapp
+
+Ejercicios
+----------
+1.-Generar cabecera dinamica
+2.-Ocultar campo id
+3.-Campo desc->20 primeros caracteres, mostrar resto
+4.-Imagenes
+5.-Css de la tabla
