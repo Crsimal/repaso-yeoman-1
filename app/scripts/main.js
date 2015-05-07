@@ -13,11 +13,19 @@ $($boton).click(function() {
 
         var fila, filas;
         $.each(futbolistas, function(index, futbolista) {
-        	var fila;
-           $.each(futbolista, function(index, val) {
-           	 	fila += '<td>' + val + '</td>';
-           });
-           filas += '<tr>' + fila + '</tr>';
+            var fila;
+            $.each(futbolista, function(index, val) {
+                if (index == "imagen") {
+                	fila += '<td><img src="images/' + val + '"></td>';
+                } else if(index=='desc'){
+                	fila += '<td><a href="" data-toggle="tooltip" data-placement="top" title="' + val + '">' + val.substr(0,8) + '[...]</td>'
+                }
+
+                else {
+                    fila += '<td>' + val + '</td>';
+                };
+            });
+            filas += '<tr>' + fila + '</tr>';
         });
 
         $('#listado tbody').append(filas);
